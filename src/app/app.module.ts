@@ -16,6 +16,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
 import {CorsFixInterceptor} from "./service/interceptors/cors-fix.interceptor";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {CorsFixInterceptor} from "./service/interceptors/cors-fix.interceptor";
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: CorsFixInterceptor, multi: true }

@@ -24,12 +24,30 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        z-index: 4;
         img{
           width: 100%;
         }
         .img2{
           min-height: 30em;
         }
+      }
+      #green-circle{
+        position: absolute;
+        top:5%;
+        left: 10%;
+      }
+      #red-circle{
+        position: absolute;
+        top:70%;
+        left: 30%;
+      }
+      #dots{
+        position: absolute;
+        top:5%;
+        left: 10%;
+        z-index: 1;
       }
     }
     button{
@@ -44,7 +62,18 @@
   .about-main{
     background: $primary-dark;
     padding:30px 0;
+    .b-content{
+      justify-content: center;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+    }
+    img{
+      width: 6em;
+      height: auto;
+    }
     .about-content-text{
+
       h5{
         color:white;
         font-size: $textx-regular-2;
