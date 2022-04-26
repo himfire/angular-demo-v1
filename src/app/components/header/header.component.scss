@@ -1,0 +1,35 @@
+@import "src/app/app.component";
+.navbar{
+  .navbar-nav{
+    .nav-item{
+      padding:0 1.5em;
+      .nav-link{
+        color:$primary-dark;
+        font-weight: 600;
+      }
+    }
+  }
+
+  button.login{
+    color:white;
+    background: $primary-dark;
+    border:1px solid $primary-dark;
+    width: 7em;
+    text-align: center;
+    height: 3em;
+  }
+  button.login:hover{
+    color:$primary-dark;
+    background: white;
+  }
+  button.register{
+    color:white;
+    background: $green-primary;
+    width: 7em;
+    height: 3em;
+  }
+  button.register:hover{
+    color:white;
+    background: $green-primary;
+  }
+}

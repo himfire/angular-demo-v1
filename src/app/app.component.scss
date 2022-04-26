@@ -1,0 +1,41 @@
+//Here you can customize bootstrap
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+$primary: #0358dc;
+$primary-dark:#02619A;
+$blue-primary:#1D25DC;
+$red-dark:#DB2F18;
+$green-primary: #029A4C;
+$green-light:#03DC6D;
+$green-dark:#6F8F09;
+
+$blue-green: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+$light-linear: linear-gradient(128.68deg, #cfd9df 1.25%, #e2ebf0 94.09%);
+$dark-gray: #585757;
+$green-purple: linear-gradient(126.68deg, #30cfd0 -2.59%, #330867 103.03%);
+$green-lightblue: linear-gradient(90deg, #2af598 0%, #009efd 100%);
+$light-dark: linear-gradient(135.29deg, #eef4ff 0%, rgba(130, 164, 190, 0.37) 64.59%, rgba(13, 78, 120, 0.53) 97.47%);
+$hx-1: 6em;
+$hx-2: 4.5em;
+$hx-3: 4em;
+$hx-4: 3em;
+$hx-5: 2.25em;
+$hx-6: 1.5em;
+
+$textx-regular-1: 1.5em;
+$textx-regular-2: 1.25em;
+$textx-regular-3: 1.125em;
+$textx-regular-4: 1em;
+$textx-regular-5: 0.75em;
+
+$shadowx-1: 0px 10px 20px rgba(0, 0, 0, 0.15);
+$shadowx-2: 0px 20px 40px rgba(0, 0, 0, 0.25);
+$shadowy-2: 0px 15px 30px rgba(0, 0, 0, 0.15);
+$shadowy-2: 0px 30px 60px rgba(0, 0, 0, 0.25);
+
+
+$btn-width-1: 1em;
+
+$shadow-filter-x: drop-shadow(0px 13px 15px rgba(0, 0, 0, 0.25));
+body{
+  font-family: 'Poppins', sans-serif;
+}

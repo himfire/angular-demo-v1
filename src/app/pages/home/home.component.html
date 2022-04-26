@@ -1,0 +1,158 @@
+<div class="home-page">
+  <section class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <h4 class="mb-5">DEVELOPED BY TOP TEACHERS</h4>
+          <h2 class="mb-3">Experience a learning platform that take you to the next level</h2>
+          <p class="mb-5">
+            World-class training and development programs developed by top teachers
+          </p>
+          <button class="btn btn-primary mb-5" (click)="getStarted()">Get Started</button>
+        </div>
+        <div class="col-lg-5 offset-2">
+          <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col">
+              icon
+            </div>
+            <div class="col about-content-text align-self-center">
+              <h5 class="mb-4">
+                Web-Based Delivery
+              </h5>
+              <p class="mt-4">
+                Courses Led and Designed Industry
+                Experts
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col">
+              icon
+            </div>
+            <div class="col about-content-text align-self-center">
+              <h5 class="mb-4">
+                World-Class Coaching
+              </h5>
+              <p class="mt-4">
+                World-Class Coaching
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col">
+              icon
+            </div>
+            <div class="col about-content-text align-self-center">
+              <h5 class="mb-4">
+                Job Matching
+              </h5>
+              <p class="mt-4">
+                12 Week Tutorial
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="classification my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 my-5">
+          <h3 class="mb-3">Proof Of Concept</h3>
+        </div>
+        <div *ngFor="let collection of collections" class="col-lg-4 mb-5">
+          <div class="card my-2">
+            <div class="row">
+              <img class="card-img-top col-4 align-self-center" src="{{collection?.img}}" alt="">
+              <div class="card-body col-8">
+                <h4 class="card-title">{{collection.title}}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="top-rated py-5">
+    <div class="container">
+      <h3 class="mb-5">
+        Learning Tutorials
+      </h3>
+      <div class="row">
+        <div *ngFor="let lesson of lessons" class="col-lg-4 my-4">
+          <div class="card">
+            <img class="card-img-top" data-src="{{lesson.img}}" alt="Card image cap">
+            <div class="card-body">
+              <div class="top-list">
+                <span class="lesson-topic">{{lesson.topic}}</span>
+                <span class="lesson-price">{{lesson.price}}$</span>
+              </div>
+              <h4 class="card-title">{{lesson.title}}</h4>
+              <p class="instructor"><i class="fa fa-user-circle"></i> {{lesson.instructor}}</p>
+            </div>
+            <div class="card-body">
+              <a href="#" class="card-link btn btn-bluu-primary mb-2">Buy Now <i class="fa fa-shopping-cart"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about-2 py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <i class="fa fa-arrow-circle-o-right fa-2x"></i>
+          <h3>Subscribe Newsletters</h3>
+          <p>Enter your email address to register to our newsletter</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="form-inline">
+            <input type="text" name="subscribe" />
+            <button class="btn" type="submit">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="certification">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+      </div>
+    </div>
+  </section>
+  <section class="subscribe">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-5"></div>
+        <div class="col-lg-7"></div>
+      </div>
+    </div>
+  </section>
+</div>
