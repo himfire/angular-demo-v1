@@ -1,7 +1,7 @@
 @import "src/app/app.component";
 .home-page{
   .top-header{
-    padding-top:6.25em;
+    padding:6.25em 0;
 
     h4{
       color:$green-primary;
@@ -15,6 +15,22 @@
     }
     p{
       color:$dark-gray;
+    }
+    .box-header{
+      position: relative;
+      .box-images{
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        img{
+          width: 100%;
+        }
+        .img2{
+          min-height: 30em;
+        }
+      }
     }
     button{
       background: $primary-dark;
