@@ -13,22 +13,21 @@ export class SignupComponent implements OnInit {
   signUpForm:FormGroup
   constructor(private fb:FormBuilder,private auth:AuthService) {
     this.signUpForm = fb.group({
-      firstName: ['hisham', [Validators.required]],
-      lastName: ['Khartoum', [Validators.required]],
-      username: ['hdalang', [Validators.required]],
-      email:['hdalang@gmail.com',[Validators.required]],
-      authority:['USER',[Validators.required]],
+      firstName: ['', [Validators.required]],
+      username: ['', [Validators.required, Validators.pattern('^[a-zA-Z][a-zA-Z0-9_-]{4,32}')]],
+      email:['',[Validators.required, Validators.email]],
+      authority:['',[Validators.required]],
 
-      password:['1234qwer',[Validators.required]],
-      password2:['1234qwer',[Validators.required]],
+      password:['',[Validators.required]],
+      password2:['',[Validators.required]],
       phone : fb.group({
-        countryCode: ['+999',[Validators.required]],
-        phoneNumber: ['99999999999', [Validators.required]]
+        countryCode: ['+',[Validators.required]],
+        phoneNumber: ['', [Validators.required]]
       }),
       address: fb.group({
-        address: ['address...',[Validators.required]],
-        city: ['city...',[Validators.required]],
-        country: ['USA',[Validators.required]],
+        address: ['',[Validators.required]],
+        city: ['',[Validators.required]],
+        country: ['',[Validators.required]],
       }),
       accept_terms:true
     });
@@ -49,8 +48,12 @@ export class SignupComponent implements OnInit {
   private Phone phone;
 
   private Address address;*/
+  formNotValid: boolean = false;
   onSubmit() {
     console.log(this.signUpForm);
+    if ( ! this.signUpForm.valid){
+      this.formNotValid = true;
+    }
     if ( this.signUpForm.valid){
 /*      let form = {
         username: this.signUpForm.get('username'),
@@ -63,5 +66,9 @@ export class SignupComponent implements OnInit {
       })
 
     }
+  }
+
+  get f(){
+    return this.signUpForm.controls;
   }
 }

@@ -1,16 +1,24 @@
+@import "src/app/app.component";
 footer.section {
-  .context-dark,
-  .bg-gray-dark,
-  .bg-primary {
-    color: rgba(255, 255, 255, 0.8);
-  }
 
-  .footer-classic a,
-  .footer-classic a:focus,
-  .footer-classic a:active {
+
+  .heading a, .heading p,
+  .heading a:focus,
+  .heading a:active {
     color: #ffffff;
   }
-
+  .contact {
+    color:white;
+    a{
+      color:$green-light;
+    }
+  }
+  .links{
+    color:white;
+    a{
+      color:$green-light;
+    }
+  }
   .nav-list li {
     padding-top: 5px;
     padding-bottom: 5px;

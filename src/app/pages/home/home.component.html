@@ -40,8 +40,8 @@
   </section>
   <section class="about-main py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
+      <div class="row d-flex main-box">
+        <div>
           <div class="row d-flex b-content">
             <div data-aos="zoom-out" data-aos-once="true" data-aos-easing="linear" data-aos-mirror="true"
                  data-aos-duration="800">
@@ -59,7 +59,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div>
           <div class="row d-flex b-content">
             <div data-aos="zoom-out" data-aos-once="true" data-aos-easing="linear" data-aos-mirror="true"
                  data-aos-duration="800">
@@ -76,7 +76,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div>
           <div class="row d-flex b-content">
             <div data-aos="zoom-out" data-aos-once="true" data-aos-easing="linear" data-aos-mirror="true"
                  data-aos-duration="800">
@@ -100,16 +100,19 @@
     <div class="container">
       <div class="row">
         <div class="col-12 my-5">
-          <h3 class="mb-3"  data-aos="zoom-in" data-aos-once="true" data-aos-easing="linear" data-aos-mirror="true"
-              data-aos-duration="800">Proof Of Concept</h3>
+          <h3 class="widget-title mb-3">Proof Of Concept</h3>
         </div>
-        <div *ngFor="let collection of collections" class="col-lg-4 mb-5"  data-aos="fade-down" data-aos-once="true" data-aos-mirror="true"
-             data-aos-duration="800">
-          <div class="card my-2">
-            <div class="row">
-              <img class="card-img-top col-4 align-self-center h-100" src="{{collection?.img}}" alt="">
-              <div class="card-body col-8">
-                <h4 class="card-title">{{collection.title}}</h4>
+        <div class="col-12 mb-5">
+          <div class="row">
+            <div *ngFor="let collection of collections" class="col-lg-4 mb-5"  data-aos="fade-down" data-aos-once="true" data-aos-mirror="true"
+                 data-aos-duration="800">
+              <div class="card my-2">
+                <div class="row">
+                  <img class="card-img-top col-4 align-self-center" src="{{collection?.img}}" alt="">
+                  <div class="card-body col-8">
+                    <h4 class="card-title">{{collection.title}}</h4>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -117,41 +120,47 @@
       </div>
     </div>
   </section>
-  <section class="main-video">
-    <div class="container">
+  <section class="about-us-video my-5 py-5">
+    <div class="container py-5">
       <div class="row">
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-6">
-
-            </div>
-            <div class="col-6"></div>
-            <div class="col-6"></div>
-            <div class="col-6"></div>
+        <div class="col-lg-6 col-md-6 col-sm-12"  data-aos="fade-up" data-aos-once="true" data-aos-mirror="true"
+             data-aos-duration="800">
+          <h3 class="mb-5">Meet our community</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="box">
+              <div class="vplayer" data-v="fUis9yny_lI">
+                <div class="plybtn"></div>
+              </div>
           </div>
         </div>
-        <div class="col-lg-6"></div>
       </div>
     </div>
   </section>
   <section class="top-rated py-5">
     <div class="container">
-      <h3 class="mb-5">
+      <h3 class="mb-5 widget-title ">
         Learning Tutorials
       </h3>
       <div class="row">
-        <div *ngFor="let lesson of lessons" class="col-lg-4 my-4">
+        <div *ngFor="let lesson of lessons" class="col-lg-4 my-4" data-aos="fade-up" data-aos-once="true" data-aos-mirror="true"
+             data-aos-duration="800">
           <div class="card">
-            <img class="card-img-top" data-src="{{lesson.img}}" alt="Card image cap">
+            <div class="card-img-top">
+              <span class="card-topic">{{lesson.topic}}</span>
+              <img class="" data-src="{{lesson.img}}" alt="Card image cap">
+            </div>
             <div class="card-body">
               <div class="top-list">
-                <span class="lesson-topic">{{lesson.topic}}</span>
-                <span class="lesson-price">{{lesson.price}}$</span>
+                <span class="lesson-counter"><img src="assets/images/opened-book-4984.svg" /> <span class="pl-2">42 Lessons</span></span>
+
               </div>
               <h4 class="card-title">{{lesson.title}}</h4>
               <p class="instructor"><i class="fa fa-user-circle"></i> {{lesson.instructor}}</p>
             </div>
-            <div class="card-body">
+            <div class="card-footer">
+              <span class="lesson-price">{{lesson.price}}$</span>
               <a href="#" class="card-link btn btn-bluu-primary mb-2">Buy Now <i class="fa fa-shopping-cart"></i> </a>
             </div>
           </div>

@@ -62,109 +62,225 @@
   .about-main{
     background: $primary-dark;
     padding:30px 0;
-    .b-content{
+    .main-box{
+
+      display: flex;
       justify-content: center;
       flex-direction: row;
-      align-content: center;
+      flex-wrap: wrap;
+      align-content: space-between;
+      justify-content: space-between;
       align-items: center;
-    }
-    img{
-      width: 6em;
-      height: auto;
-    }
-    .about-content-text{
-
-      h5{
-        color:white;
-        font-size: $textx-regular-2;
+      .b-content{
       }
-      p{
-        color:white;
-        font-size: $textx-regular-5;
+      img{
+        width: 6em;
+        height: auto;
+      }
+      .about-content-text{
+
+        h5{
+          color:white;
+          font-size: $textx-regular-2;
+        }
+        p{
+          color:white;
+          font-size: $textx-regular-5;
+        }
       }
     }
   }
   .classification{
-    h3{
-      color:$primary;
-      font-size: $hx-5;
-      font-weight: 700;
-    }
     .card{
       border-color:rgba(3, 88, 220, 0.08);
       box-shadow: $shadowx-1;
       padding:1em 0;
       margin-bottom: 1em;
+      position: relative;
+      transition: all 1s;
+      visibility: visible;
       img{
-        height: 3em;
-        width:3em;
+        height: 4em;
+        width:auto;
       }
 
       h4.card-title{
         color:$primary;
       }
-
     }
+    .card:hover{
+      img{
+        visibility: hidden;
+        display: none;
+      }
+      h4{
+        color:white;
+        position: relative;
+        z-index: 4;
+        text-align: center;
+      }
+    }
+    .card:hover::before{
+      content: "";
+      background: $green-light;
+      position: absolute;
+      z-index: 3;
+      height: 100%;
+      width: 100%;
+      top:0;
     }
   }
-  .top-rated{
+  .about-us-video{
+    background: $primary-dark;
     h3{
-      color:$primary;
-      text-align: center;
-      font-size: $hx-5;
-      font-weight: 700;
+      color:white;
     }
-    .card{
-      box-shadow: $shadowx-1;
-      height:30em;
+    p{
+      color:white;
+      line-height: 2;
+    }
+    .vplayer {
+      margin-bottom: 30px;
+      position: relative;
+      padding-top: 56.25%;
       overflow: hidden;
-      img{
+      cursor: pointer;
+      background-color: #000;
+
+      .plybtn {
+        box-shadow: 0 0 30px rgba( 0, 0, 0, 0.6);
+        width: 90px;
+        height: 60px;
+        background-color: #333;
+        z-index: 1;
+        opacity: 0.8;
+        border-radius: 6px;
+      }
+
+      .plybtn:before {
+        content: "";
+        border-style: solid;
+        border-width: 15px 0 15px 26.0px;
+        border-color: transparent transparent transparent #fff;
+      }
+
+      img, .plybtn {
+        cursor: pointer;
+      }
+
+      img, iframe, .plybtn, .plybtn:before {
+        position: absolute;
+      }
+
+      .plybtn, .plybtn:before {
+        top: 50%;
+        left: 50%;
+        transform: translate3d( -50%, -50%, 0);
+      }
+    }
+  }
+
+
+  .top-rated {
+
+    .card {
+      box-shadow: $shadowx-1;
+      height: 29em;
+      overflow: hidden;
+      transition: all 1s;
+      border-color: rgba(3, 88, 220, 0.08) !important;
+      box-shadow: $shadowx-1;
+
+      .card-img-top {
+        position: relative;
         height: 12em;
         width: 100%;
         overflow: hidden;
-        transition-delay: 250ms;
+        transition: all 1s;
+
+        img {
+          height: 12em;
+          width: 100%;
+          overflow: hidden;
+          transition: all 1s;
+        }
+
+        span.card-topic {
+          position: absolute;
+          top: 1em;
+          left: 1em;
+          background: $green-light;
+          color: white;
+          padding: 0.5em;
+          font-size: $textx-regular-5;
+          border-radius: 1em;
+          font-weight: 700;
+          z-index: 5;
+        }
       }
-      .card-body{
-        .card-title{
-          color:$primary-dark;
+
+      .card-body {
+        .card-title {
+          color: $primary-dark;
         }
-        p.instructor{
-          color:$dark-gray;
+
+        p.instructor {
+          color: $dark-gray;
         }
-        .top-list{
+
+        .top-list {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           padding-bottom: 1.5em;
-          .lesson-topic{
-            background: $green-light;
-            color:white;
-            padding:0.5em;
-            font-size: $textx-regular-5;
-            border-radius: 1em;
-            font-weight: 700;
-          }
-          .lesson-price{
-            color:$primary-dark;
-            font-weight: 700;
+
+          .lesson-counter {
+            display: flex;
+            font-weight: 500;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: stretch;
+            color: $dark-gray;
+
+            img {
+              width: 1.2em;
+              height: auto;
+            }
           }
         }
       }
-      .btn-bluu-primary{
-        background: $primary-dark;
-        color:white;
+
+      .card-footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        background: white !important;
+
+        .lesson-price {
+          color: $primary-dark;
+          font-weight: 700;
+        }
+
+        .btn-bluu-primary {
+          background: $primary-dark;
+          color: white;
+        }
       }
     }
 
-    .card:hover{
-      img{
-        transform: scale(1.05);
-
+    .card:hover {
+      .card-img-top {
+        img {
+          transform: scale(1.2);
+        }
       }
+    }
   }
-    .main-video{
-      background: $primary;
-    }
   .about-2{
     background: $green-primary;
     i{
@@ -176,6 +292,13 @@
       color:white;
     }
     p{
+      color:white;
+    }
+    input{
+      border:3px solid #fff;
+    }
+    button{
+      background: $primary-dark;
       color:white;
     }
   }

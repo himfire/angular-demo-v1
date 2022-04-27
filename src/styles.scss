@@ -1,3 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "app/app.component";
 
-
+body{
+  font-family: 'Poppins', sans-serif;
+  h3.widget-title {
+    color:$primary-dark;
+    text-align: center;
+    font-size: $hx-5;
+    font-weight: 700;
+  }
+  h3.widget-title::before {
+    content: "";
+    height: 1.2em;
+    width: 4em;
+    background: #03DC6D;
+    position: absolute;
+    border-radius: 3em;
+    border-radius: 3em;
+    z-index: -1;
+    transform: translate(-25%,0);
+  }
+}

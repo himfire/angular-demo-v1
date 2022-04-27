@@ -17,6 +17,17 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
 import {CorsFixInterceptor} from "./service/interceptors/cors-fix.interceptor";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { OurTeamComponent } from './pages/our-team/our-team.component';
+import { DashboardContainerComponent } from './pages/dashboard-container/dashboard-container.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { AdminDashboardContainerComponent } from './pages/admin-dashboard-container/admin-dashboard-container.component';
+import { EmployeeDashboardContainerComponent } from './pages/employee-dashboard-container/employee-dashboard-container.component';
+import { EmployeeDashboardComponent } from './pages/employee-dashboard/employee-dashboard.component';
+import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { AccountComponent } from './pages/account/account.component';
+import { CourseComponent } from './pages/course/course.component';
+import { LessonComponent } from './pages/lesson/lesson.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +42,17 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     HeaderComponent,
     FooterComponent,
     SignupComponent,
+    OurTeamComponent,
+    DashboardContainerComponent,
+    ProfileComponent,
+    AdminDashboardContainerComponent,
+    EmployeeDashboardContainerComponent,
+    EmployeeDashboardComponent,
+    AdminDashboardComponent,
+    SettingsComponent,
+    AccountComponent,
+    CourseComponent,
+    LessonComponent,
   ],
   imports: [
     BrowserModule,
