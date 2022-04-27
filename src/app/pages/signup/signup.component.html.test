@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="container">
+    <h2 class="text-center" id="title">Facundo farm and Resort</h2>
+    <p class="text-center">
+      <small id="passwordHelpInline" class="text-muted"> Developer: follow me on facebook <a href="https://www.facebook.com/JheanYu"> John niro yumang</a> inspired from <a href="https://p.w3layouts.com/">https://p.w3layouts.com/</a>.</small>
+    </p>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <form [formGroup]="signUpForm" (submit)="onSubmit()"  role="form" method="post">
+          <fieldset>
+            <p class="text-uppercase pull-center"> SIGN UP.</p>
+            <div class="form-group">
+              <input formControlName="username" type="text" name="username" class="form-control input-lg" placeholder="username">
+            </div>
+
+            <div class="form-group">
+              <input formControlName="email" type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+              <input formControlName="password" type="password" name="password" class="form-control input-lg" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input formControlName="password2" type="password" name="password2" id="password2" class="form-control input-lg" placeholder="Password2">
+            </div><div formGroupName="address" class="form-row mb-5">
+            <div class="col-12">
+              <label >Address</label>
+            </div>
+            <div class="col">
+              <input formControlName="address" type="text" class="form-control" placeholder="City">
+            </div>
+            <div class="col">
+              <input formControlName="city" type="text" class="form-control" placeholder="State">
+            </div>
+            <div class="col">
+              <input formControlName="country" type="text" class="form-control" placeholder="Country">
+            </div>
+          </div>
+
+            <div formGroupName="phone" class="form-row mb-5">
+              <div class="col-12">
+                <label >Phone Number</label>
+              </div>
+              <div class="col">
+                <input formControlName="countryCode" type="text" class="form-control" placeholder="countryCode">
+              </div>
+              <div class="col">
+                <input formControlName="phoneNumber" type="text" class="form-control" placeholder="phoneNumber">
+              </div>
+            </div>
+            <div>
+              <input type="submit" class="btn btn-lg btn-primary"   value="Submit" >
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
