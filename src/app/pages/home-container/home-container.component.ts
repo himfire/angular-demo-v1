@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomeContainerComponent implements OnInit {
 
   constructor() { }
-
+  isContentLoad: boolean = false;
   ngOnInit(): void {
+    setTimeout(()=>{
+      this.isContentLoad = true;
+    },100)
   }
 
 }

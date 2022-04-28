@@ -1,0 +1,63 @@
+<!--
+<div *ngIf=" ! isContentLoaded">
+  <i class="fa fa-spinner fa-spin fa-4x"></i>
+</div>
+<div *ngIf="isContentLoaded" class="div">
+  <h1> Blog Details</h1>
+  <h2>{{currentBlog?.title}}</h2>
+  <h2>{{currentBlog?.createdDate}}</h2>
+  <h2>{{currentBlog?.description}}</h2>
+
+</div>
+-->
+<div class="blog">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="blog-post">
+          <div class="post-img">
+            <img src={{currentBlog?.img}} />
+          </div>
+          <div class="blog-content p-5">
+            <div class="title mb-5">
+              <h2>{{currentBlog?.title}}</h2>
+            </div>
+            <span class="mb-5">{{currentBlog?.createdDate}}</span>
+            <div class="description my-5">
+              <p>{{currentBlog?.description}}</p>
+              <p>Where can I get some?
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+
+        <div class="latest-blog">
+          <div class="row">
+            <div class="col-12 my-5" data-aos="fade-down" data-aos-once="true" data-aos-mirror="true"
+                 data-aos-duration="800">
+              <h4 class="mb-4">Read more interesting topics</h4>
+              <div class="featured-content">
+                <div *ngFor="let collection of collections" class="col-lg-4 interesting-topics" >
+                  <a class="my-3 d-flex justify-content-between align-items-center " routerLink="/blogs/{{collection.title}}"><img src="{{collection?.img}}" alt="{{collection.title}}">
+                    <span>{{collection.title}}</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-5">
+              <h4>Courses</h4>
+              <div class="featured-content"></div>
+            </div>
+            <div class="col-12">
+              <h4>Social Media</h4>
+              <div class="featured-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

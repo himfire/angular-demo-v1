@@ -1,9 +1,13 @@
-<app-header>
-</app-header>
-<router-outlet>
-</router-outlet>
+<div *ngIf=" ! isContentLoad">
+  <i class="fa fa-spinner fa-spin fa-4x"></i>
+</div>
+<div *ngIf="isContentLoad" class="div">
 
-
-<app-footer></app-footer>
+  <app-header>
+  </app-header>
+  <router-outlet>
+  </router-outlet>
+  <app-footer></app-footer>
+</div>
 
 

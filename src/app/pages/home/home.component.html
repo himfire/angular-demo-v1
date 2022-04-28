@@ -106,14 +106,14 @@
           <div class="row">
             <div *ngFor="let collection of collections" class="col-lg-4 mb-5"  data-aos="fade-down" data-aos-once="true" data-aos-mirror="true"
                  data-aos-duration="800">
-              <div class="card my-2">
+              <a class="card my-2" routerLink="/blogs/{{collection.title}}">
                 <div class="row">
                   <img class="card-img-top col-4 align-self-center" src="{{collection?.img}}" alt="">
                   <div class="card-body col-8">
                     <h4 class="card-title">{{collection.title}}</h4>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@
                 <span class="lesson-counter"><img src="assets/images/opened-book-4984.svg" /> <span class="pl-2">42 Lessons</span></span>
 
               </div>
-              <h4 class="card-title">{{lesson.title}}</h4>
+              <h4 class="card-title"><a routerLink="">{{lesson.title}}</a> </h4>
               <p class="instructor"><i class="fa fa-user-circle"></i> {{lesson.instructor}}</p>
             </div>
             <div class="card-footer">

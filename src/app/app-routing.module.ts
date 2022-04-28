@@ -19,6 +19,7 @@ import {AdminDashboardComponent} from "./pages/admin-dashboard/admin-dashboard.c
 import {UserGuard} from "./shared/guards/user.guard";
 import {AdminGuard} from "./shared/guards/admin.guard";
 import {AuthGuard} from "./shared/guards/auth.guard";
+import {BlogComponent} from "./pages/blog/blog.component";
 
 const routes: Routes = [
 
@@ -31,6 +32,8 @@ const routes: Routes = [
       {path: 'signup' , component:SignupComponent },
       {path: 'courses' , component:CoursesComponent },
       {path: 'our-team' , component:OurTeamComponent },
+      {path: 'blogs/:title' , component:BlogComponent },
+      // {path: 'blog/:id' , component:OurTeamComponent },
     ]
   },{path: 'user-dashboard' , component: DashboardContainerComponent, canActivate: [UserGuard],children: [
       {path:'', component: DashboardComponent},

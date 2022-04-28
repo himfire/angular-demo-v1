@@ -28,6 +28,8 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { AccountComponent } from './pages/account/account.component';
 import { CourseComponent } from './pages/course/course.component';
 import { LessonComponent } from './pages/lesson/lesson.component';
+import { BlogsComponent } from './pages/blogs/blogs.component';
+import { BlogComponent } from './pages/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { LessonComponent } from './pages/lesson/lesson.component';
     AccountComponent,
     CourseComponent,
     LessonComponent,
+    BlogsComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
