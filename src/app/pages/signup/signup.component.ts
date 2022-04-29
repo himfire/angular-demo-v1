@@ -13,23 +13,23 @@ export class SignupComponent implements OnInit {
   signUpForm:FormGroup
   constructor(private fb:FormBuilder,private auth:AuthService) {
     this.signUpForm = fb.group({
-      firstName: ['Hisham', [Validators.required]],
-      lastName: ['Khartoum', [Validators.required]],
-      username: ['hossam', [Validators.required, Validators.pattern('^[a-zA-Z][a-zA-Z0-9_-]{4,32}')]],
-      email:['hishamkhartoum@gmail.com ',[Validators.required]],
+      firstName: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      username: ['', [Validators.required, Validators.pattern('^[a-zA-Z][a-zA-Z0-9_-]{4,32}')]],
+      email:['',[Validators.required]],
       authority:['0',[Validators.required]],
 
-      password:['123456',[Validators.required]],
-      password2:['123456',[Validators.required]],
+      password:['',[Validators.required]],
+      password2:['',[Validators.required]],
       phone : fb.group({
-        countryCode: ['1',[Validators.required]],
-        phoneNumber: ['9653752342', [Validators.required]]
+        countryCode: ['',[Validators.required]],
+        phoneNumber: ['', [Validators.required]]
       }),
       address: fb.group({
-        address: ['test test',[Validators.required]],
-        city: ['test',[Validators.required]],
-        state: ['testt',[Validators.required]],
-        country: ['USA',[Validators.required]],
+        address: ['',[Validators.required]],
+        city: ['',[Validators.required]],
+        state: ['',[Validators.required]],
+        country: ['',[Validators.required]],
       }),
       accept_terms:true,
 
