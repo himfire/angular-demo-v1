@@ -3,7 +3,6 @@ import {ClassificationService} from "../../service/classification.service";
 import {Collection} from "../../model/collection.model";
 import {Lesson} from "../../model/lesson.model";
 import {LessonsService} from "../../service/lessons.service";
-import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
 import {trigger, state, style} from "@angular/animations";
 
 @Component({
@@ -29,6 +28,7 @@ export class HomeComponent implements OnInit {
     this.state = 'right';
     this.getAllClassif();
     this.getAllLessons();
+
     // this.classification.getAllClassification().subscribe(value => {
     //   console.log("Got data from server")
     //   console.log(value)
