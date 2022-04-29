@@ -30,6 +30,7 @@ import { CourseComponent } from './pages/course/course.component';
 import { LessonComponent } from './pages/lesson/lesson.component';
 import { BlogsComponent } from './pages/blogs/blogs.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { VerifyAccountComponent } from './pages/verify-account/verify-account.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { BlogComponent } from './pages/blog/blog.component';
     LessonComponent,
     BlogsComponent,
     BlogComponent,
+    VerifyAccountComponent,
   ],
   imports: [
     BrowserModule,

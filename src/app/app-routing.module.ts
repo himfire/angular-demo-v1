@@ -20,11 +20,14 @@ import {UserGuard} from "./shared/guards/user.guard";
 import {AdminGuard} from "./shared/guards/admin.guard";
 import {AuthGuard} from "./shared/guards/auth.guard";
 import {BlogComponent} from "./pages/blog/blog.component";
+import {VerifyAccountComponent} from "./pages/verify-account/verify-account.component";
 
 const routes: Routes = [
 
   {path: '' , component: HomeContainerComponent, canActivate: [AuthGuard],children: [
       {path:'', component: HomeComponent},
+      // {path:'verify-account/:id?code=:code', component: VerifyAccountComponent},
+      {path:'verify-account/:id/:code', component: VerifyAccountComponent},
       {path:'login', component: LoginComponent},
       {path: 'about' , component:AboutComponent },
       {path: 'instructors' , component:InstructorsComponent },
@@ -33,6 +36,7 @@ const routes: Routes = [
       {path: 'courses' , component:CoursesComponent },
       {path: 'our-team' , component:OurTeamComponent },
       {path: 'blogs/:title' , component:BlogComponent },
+
       // {path: 'blog/:id' , component:OurTeamComponent },
     ]
   },{path: 'user-dashboard' , component: DashboardContainerComponent, canActivate: [UserGuard],children: [

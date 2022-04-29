@@ -6,15 +6,15 @@ import {JWToken} from "../model/token.model";
   providedIn: 'root'
 })
 export class AuthService {
-  BASE_URL = 'http://localhost:8080/api/v1/'
+  BASE_URL = 'http://localhost:8080/api/v1/auth'
   constructor(private http:HttpClient) {
 
   }
   register(form:any){
-    return this.http.post(this.BASE_URL+"users",form, );
+    return this.http.post(this.BASE_URL+"/signup",form, );
   }
 
   login(form:any){
-    return this.http.post<JWToken>(this.BASE_URL+"auth/login",form, {observe: 'response'});
+    return this.http.post<JWToken>(this.BASE_URL+"/login",form, {observe: 'response'});
   }
 }
