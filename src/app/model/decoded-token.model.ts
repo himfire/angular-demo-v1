@@ -3,6 +3,7 @@ export interface DecodedToken{
   iat: number
   isActive: boolean
   role: string
+  name:string
   sub: string
   userId: number
 }

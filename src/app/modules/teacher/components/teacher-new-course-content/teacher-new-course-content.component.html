@@ -1,0 +1,77 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="py-3 mb-5">Add new course</h4>
+      </div>
+
+      <div class="col-12">
+        <form [formGroup]="newCourseForm" (submit)="submit()">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" formControlName="title" id="title" class="form-control" placeholder="Add Course title" aria-describedby="helpId">
+            <small  class="text-muted">Help text</small>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label><br>
+            <textarea formControlName="description" id="description" cols="100" rows="10"></textarea>
+            <br>
+            <small class="text-muted">Help text</small>
+          </div>
+          <div class="form-group">
+            <label for="skillLevel">Skill Level</label>
+            <select class="form-control" formControlName="skillLevel" id="skillLevel">
+              <option value="BEGINNER">Beginner</option>
+              <option value="INTERMEDIATE">Intermediate</option>
+              <option value="EXPERT">Expert</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="price"></label>
+            <input type="text" formControlName="price" id="price" class="form-control" placeholder="" aria-describedby="helpId">
+            <small id="helpId" class="text-muted">Help text</small>
+          </div>
+          <div class="form-group">
+            <label for="duration">Duration</label>
+            <select class="form-control" formControlName="duration" id="duration">
+              <option value="1">1 Week</option>
+              <option value="2">2 Week</option>
+              <option value="3">3 Week</option>
+              <option value="4">4 Week</option>
+              <option value="5">5 Weeks</option>
+              <option value="6">6 Weeks</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="courseImageURL">Course Header Image</label>
+            <input type="text" formControlName="courseImageURL" id="courseImageURL" class="form-control" placeholder="" aria-describedby="helpId">
+            <small  class="text-muted">Help text</small>
+          </div>
+          <div class="form-group">
+            <label for="courseVideoURL">Course Video</label>
+            <input type="text" formControlName="courseVideoURL" id="courseVideoURL" class="form-control" placeholder="" aria-describedby="helpId">
+            <small  class="text-muted">Help text</small>
+          </div>
+          <div class="form-group">
+            <label for="language"></label>
+            <select formControlName="language" class="form-control"  id="language">
+              <option value="ENGLISH">English</option>
+              <option value="ARABIC">Arabic</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contributes">Contributors</label>
+            <input type="text" formControlName="contributes" id="contributes" class="form-control" placeholder="" aria-describedby="helpId">
+            <small  class="text-muted">Help text</small>
+          </div>
+          <button type="submit"> Submit</button>
+          <div *ngIf="savedCourse">
+            <span>
+              Course created , <a routerLink="/teacher/courses/{{savedCourse.slugTitle}}"> show details</a>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

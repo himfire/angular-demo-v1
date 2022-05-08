@@ -24,7 +24,7 @@ export class AdminGuard implements CanActivate {
       return false;
     }else{
       let decodedToken: DecodedToken = jwt_decode(<string>token);
-      if (decodedToken.role !== "ROLE_ADMIN"){
+      if (decodedToken.role !== "ADMIN"){
         this.router.navigateByUrl('/login')
         return false;
       }

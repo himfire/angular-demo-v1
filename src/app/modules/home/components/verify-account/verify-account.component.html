@@ -1,0 +1,14 @@
+
+<section  class="register-photo">
+  <div class="form-container">
+    <div class="image-holder"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div *ngIf="accountVerified" class="py-5"><h4>Account is verified. click on <a routerLink="/login">login</a> </h4></div>
+          <div *ngIf="verifFailed" class="py-5"><h4>Account is not verified. Please try again </h4></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

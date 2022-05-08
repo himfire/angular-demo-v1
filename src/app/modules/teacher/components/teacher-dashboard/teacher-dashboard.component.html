@@ -1,0 +1,39 @@
+<div class="bluu-dashboard">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Dashboard</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngIf="courses?.empty" class="col">
+        <h4> your courses will appear here.</h4>
+      </div>
+      <div *ngFor="let course of courses.content" class="col-lg-4 col-md-6 col-sm-12 my-4" data-aos="fade-up" data-aos-once="true" data-aos-mirror="true"
+           data-aos-duration="800">
+        <div class="card">
+          <div class="card-img-top">
+<!--            <span class="card-topic">{{course.tag}}</span>-->
+            <img class="" data-src="{{course.courseImageURL}}" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <div class="top-list">
+              <span class="lesson-counter"><img src="../../../../../assets/images/opened-book-4984.svg" /> <span class="pl-2">42 Lessons</span></span>
+
+            </div>
+            <h4 class="card-title"><a routerLink="/teacher/courses/{{course.slugTitle}}">{{course.title}}</a> </h4>
+            <p class="instructor"><i class="fa fa-user-circle"></i> {{course.author.firstName}} {{course.author.lastName}}</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="card-link btn btn-bluu-primary mb-2">View <i class="fa fa-arrow-circle-right"></i> </a>
+            <span>Price: {{course.price}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

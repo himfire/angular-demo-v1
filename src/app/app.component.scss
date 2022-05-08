@@ -1,6 +1,8 @@
 //Here you can customize bootstrap
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "~@fancyapps/ui/dist/fancybox.css";
+@import "~tippy.js/dist/tippy.css";
+@import '~tippy.js/animations/scale.css';
 $primary: #0358dc;
 $primary-dark:#02619A;
 $blue-primary:#1D25DC;
@@ -346,4 +348,104 @@ body{
     }
   }
 
+}
+.all-courses {
+
+  .card {
+    box-shadow: $shadowx-1;
+    height: 29em;
+    overflow: hidden;
+    transition: all 1s;
+    border-color: rgba(3, 88, 220, 0.08) !important;
+    box-shadow: $shadowx-1;
+
+    .card-img-top {
+      position: relative;
+      height: 12em;
+      width: 100%;
+      overflow: hidden;
+      transition: all 1s;
+
+      img {
+        height: 12em;
+        width: 100%;
+        overflow: hidden;
+        transition: all 1s;
+      }
+
+      span.card-topic {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        background: $green-light;
+        color: white;
+        padding: 0.5em;
+        font-size: $textx-regular-5;
+        border-radius: 1em;
+        font-weight: 700;
+        z-index: 5;
+      }
+    }
+
+    .card-body {
+      .card-title {
+        color: $primary-dark;
+      }
+
+      p.instructor {
+        color: $dark-gray;
+      }
+
+      .top-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 1.5em;
+
+        .lesson-counter {
+          display: flex;
+          font-weight: 500;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-content: center;
+          justify-content: center;
+          align-items: stretch;
+          color: $dark-gray;
+
+          img {
+            width: 1.2em;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .card-footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      background: white !important;
+
+      .lesson-price {
+        color: $primary-dark;
+        font-weight: 700;
+      }
+
+      .btn-bluu-primary {
+        background: $primary-dark;
+        color: white;
+      }
+    }
+  }
+
+  .card:hover {
+    .card-img-top {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
 }

@@ -1,0 +1,75 @@
+<div class="bluu-dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Course Details</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 col-sm-12">
+        <div class="course-content">
+<!--          <h5 class="category mb-3">Development</h5>-->
+          <div class="title my-5">
+            <h2>The business Intelligence analyst Course 2022</h2>
+          </div>
+          <img src="{{currentCourse.courseImageURL}}" class="w-100 mb-5"  style="max-height: 30em" alt="">
+          <div class="list d-flex flex-row justify-content-lg-between mb-5">
+            <div class="user d-flex justify-content-lg-start flex-row align-items-center flex-wrap">
+              <img src="../../../../../assets/images/user-profile.svg" alt="" style="width: 10%" class="h-auto d-inline-block pr-1">
+              <span class="d-inline-block">Hisham Khartoum</span>
+            </div>
+            <span class=" flex-wrap py-3"><span style="color:blue">Published Date:</span> 24/July/2021</span>
+          </div>
+          <div class="tabs-content">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab"
+                   href="#description" role="tab" aria-controls="description" aria-selected="true">
+                  <i class="fa"></i>Description
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="curriculum-tab" data-toggle="tab"
+                   href="#curriculum" role="tab" aria-controls="curriculum" aria-selected="false">
+                  <i class="fa fa-book mr-2"></i>Curriculum</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="reviews-tab" data-toggle="tab"
+                   href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">
+                  <i class="fa fa-book mr-2"></i>Reviews</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">{{currentCourse.description}}</div>
+              <div class="tab-pane fade" id="curriculum" role="tabpanel" aria-labelledby="curriculum-tab">Curriculum</div>
+              <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">Reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12">
+        <div class="p-5">
+          <div class="video">{{currentCourse.courseVideoURL}}</div>
+          <div class="price">{{currentCourse.price}}</div>
+          <div class="list-of-details">
+            <ul class="list-unstyled">
+              <li>Instructor: {{currentCourse.author.firstName}} {{currentCourse.author.lastName}}</li>
+              <li>Contributors: {{currentCourse.contributors}}</li>
+              <li>Lectures:</li>
+              <li>Duration: {{currentCourse.duration}}</li>
+              <li>Language: {{currentCourse.language}}</li>
+            </ul>
+          </div>
+          <div class="">
+            <a class="btn btn-primary text-decoration-none">Edit <i class="fa fa-edit"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--{{currentCourse | json }}-->

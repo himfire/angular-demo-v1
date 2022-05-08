@@ -1,0 +1,97 @@
+
+<div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark">
+    <i class="fa fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a href="#">Bluu Tech</a>
+        <div id="close-sidebar">
+          <i class="fa fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+               alt="User picture">
+        </div>
+        <div class="user-info">
+          <span class="user-name">{{loggedUser ?.firstName}}
+            <strong>{{loggedUser ?.lastName}}</strong>
+          </span>
+          <span class="user-role">{{userRole}}</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>My dashboard</span>
+          </li>
+          <li>
+            <a routerLink="/admin/">
+              <i class="fa fa-book"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="header-menu">
+            <span>Courses Management</span>
+          </li>
+          <li>
+            <a routerLink="/admin/courses-management">
+              <i class="fa fa-book"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/admin/courses-management/course/new">
+              <i class="fa fa-book"></i>
+              <span>Add New Course</span>
+            </a>
+          </li>
+          <li class="header-menu">
+            <span>Extra</span>
+          </li>
+          <li>
+            <a routerLink="/documentation">
+              <i class="fa fa-book"></i>
+              <span>Documentation</span>
+              <span class="badge badge-pill badge-primary">Beta</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-calendar"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a routerLink="/admin/notification">
+        <i class="fa fa-bell"></i>
+        <span class="badge badge-pill badge-warning notification">3</span>
+      </a>
+      <a routerLink="/admin/settings">
+        <i class="fa fa-cog"></i>
+        <span class="badge-sonar"></span>
+      </a>
+      <a (click)="logout()">
+        <i class="fa fa-power-off"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <router-outlet></router-outlet>
+  </main>
+  <!-- page-content" -->
+</div>
+

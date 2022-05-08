@@ -1,0 +1,57 @@
+<section class="py-5 courses-header mb-5" >
+  <div class="container">
+    <div class="photo-card"  data-aos="fade-up" data-aos-once="true" data-aos-mirror="true"
+         data-aos-duration="800">
+      <h2 class="py-5">Courses</h2>
+      <h5>We believe in building a new future for our client</h5>
+    </div>
+  </div>
+</section>
+<section class="all-courses">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div *ngFor="let lesson of lessons" class="col-lg-4 col-md-6 col-sm-12 my-4" data-aos="fade-up" data-aos-once="true" data-aos-mirror="true"
+           data-aos-duration="800">
+        <div class="card">
+          <div class="card-img-top">
+            <span class="card-topic">{{lesson.topic}}</span>
+            <img class="" data-src="{{lesson.img}}" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <div class="top-list">
+              <span class="lesson-counter"><img src="../../../../../assets/images/opened-book-4984.svg" /> <span class="pl-2">42 Lessons</span></span>
+
+            </div>
+            <h4 class="card-title"><a routerLink="/c/{{lesson.name}}">{{lesson.title}}</a> </h4>
+            <p class="instructor"><i class="fa fa-user-circle"></i> {{lesson.instructor}}</p>
+          </div>
+          <div class="card-footer">
+            <span class="lesson-price">{{lesson.price}}$</span>
+            <a href="#" class="card-link btn btn-bluu-primary mb-2">Buy Now <i class="fa fa-shopping-cart"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<nav aria-label="Page navigation" data-aos="fade-down" data-aos-once="true" data-aos-mirror="true"
+data-aos-duration="100">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" (click)="courses_page(1)">1</a></li>
+    <li class="page-item"><a class="page-link" (click)="courses_page(2)">2</a></li>
+    <li class="page-item"><a class="page-link" (click)="courses_page(3)">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+

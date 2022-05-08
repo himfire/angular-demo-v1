@@ -1,0 +1,101 @@
+@import "../../../../app.component";
+.bluu-dashboard {
+
+  .card {
+    box-shadow: $shadowx-1;
+    height: 29em;
+    overflow: hidden;
+    transition: all 1s;
+    border-color: rgba(3, 88, 220, 0.08) !important;
+    box-shadow: $shadowx-1;
+
+    .card-img-top {
+      position: relative;
+      height: 12em;
+      width: 100%;
+      overflow: hidden;
+      transition: all 1s;
+
+      img {
+        height: 12em;
+        width: 100%;
+        overflow: hidden;
+        transition: all 1s;
+      }
+
+      span.card-topic {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        background: $green-light;
+        color: white;
+        padding: 0.5em;
+        font-size: $textx-regular-5;
+        border-radius: 1em;
+        font-weight: 700;
+        z-index: 5;
+      }
+    }
+
+    .card-body {
+      .card-title {
+        color: $primary-dark;
+      }
+
+      p.instructor {
+        color: $dark-gray;
+      }
+
+      .top-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 1.5em;
+
+        .lesson-counter {
+          display: flex;
+          font-weight: 500;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-content: center;
+          justify-content: center;
+          align-items: stretch;
+          color: $dark-gray;
+
+          img {
+            width: 1.2em;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .card-footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      background: white !important;
+
+      .lesson-price {
+        color: $primary-dark;
+        font-weight: 700;
+      }
+
+      .btn-bluu-primary {
+        background: $primary-dark;
+        color: white;
+      }
+    }
+  }
+
+  .card:hover {
+    .card-img-top {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

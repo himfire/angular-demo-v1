@@ -11,7 +11,7 @@ export class AuthService {
 
   }
   register(form:any){
-    return this.http.post(this.BASE_URL+"/signup",form, );
+    return this.http.post<String>(this.BASE_URL+"/signup",form, );
   }
 
   login(form:any){

@@ -18,13 +18,13 @@ export class UserGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     let token = localStorage.getItem('_jwt');
-
+    console.log("Inside user login")
     if (token == null ){
       this.router.navigateByUrl('/login')
       return false;
     }else{
       let decodedToken: DecodedToken = jwt_decode(<string>token);
-      if (decodedToken.role !== "ROLE_USER"){
+      if (decodedToken.role !== "USER"){
         this.router.navigateByUrl('/login')
         return false;
       }

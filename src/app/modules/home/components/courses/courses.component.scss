@@ -1,0 +1,17 @@
+@import "../../../../app.component";
+.courses-header{
+  background: url("../../../../../assets/images/courses-background.png") center center no-repeat;
+  background-size: cover;
+  height: 30em;
+  h2{
+    font-size:$hx-1 ;
+    color: white;
+    display: flex;
+    height: 100%;
+    justify-items: center;
+    text-shadow: $shadowx-1;
+  }
+  h5{
+    color:white;
+  }
+}

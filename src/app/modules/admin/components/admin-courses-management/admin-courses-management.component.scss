@@ -1,0 +1,129 @@
+@import "src/app/app.component";
+.courses-list{
+  .card{
+
+    img{
+      height: 15em;
+    }
+  }
+  .card-title{
+    color:$primary;
+  }
+  .menu-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 10em;
+    display: none;
+    background: white;
+    box-shadow: $shadowx-1;
+    border-color:$dark-gray;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  button.toggle-button{
+    background: white;
+    border:none;
+    color:$dark-gray;
+    display: flex;
+    justify-content: end;
+  }
+  ul.menu-list.visible{
+    display: block;
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, -75%);
+    left: 100%;
+  }
+  ul li{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-top: 0;
+  }
+  ul li:hover{
+    color:white;
+    background: $dark-gray;
+  }
+}
+/*
+
+.card-name{
+  width: 100%;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  img{
+    height: 15em;
+  }
+  .label-title{
+    color: $primary;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: bold;
+  }
+
+  .card-input{
+    width: 100%;
+    outline: none;
+    padding: 10px 20px;
+    background: #8cb1b7;
+    cursor: pointer;
+    position: relative;
+    color: #e8eff1;
+    border-radius: 3px;
+  }
+
+  .arrow{
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+    color: #e8eff1;
+  }
+
+  ul.card-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 10em;
+    display: none;
+    background: #dae6e8;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  ul.card-list.visible{
+    display: block;
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    left: 100%;
+  }
+
+  ul li{
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  ul li{
+    border-top: 0;
+  }
+
+  ul li .fab,
+  .card-input .fab{
+    font-size: 32px;
+  }
+
+}
+*/
+@media screen and (max-width: 500px) {
+  /*
+   * This code will apply
+   */
+  card{
+    padding:3em;
+  }
+}
