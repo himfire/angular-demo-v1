@@ -21,7 +21,7 @@ export class VerifyAccountComponent implements OnInit {
       console.log(id)
       console.log('code :')
       console.log(code)
-       this.http.post("http://localhost:8080/api/v1/auth/verify/"+ id + "?code="+code, null, {observe: 'response'}).subscribe(value => {
+       this.http.post("http://20.237.68.140:8080/api/v1/auth/verify/"+ id + "?code="+code, null, {observe: 'response'}).subscribe(value => {
          console.log(value)
          this.accountVerified = true;
        }, error => {
