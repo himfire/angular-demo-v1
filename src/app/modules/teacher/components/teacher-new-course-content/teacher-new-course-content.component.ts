@@ -17,17 +17,17 @@ export class TeacherNewCourseContentComponent implements OnInit {
   savedCourse !:Course;
   constructor(private fb: FormBuilder,private service:CourseService,private router:Router) {
     this.newCourseForm = fb.group({
-      title: ['Introduction to Java', [Validators.required,]],
-      slugTitle: ['introduction-to-java-part2', [Validators.required,]],
-      description: ['lorme ipsum tea eateafa esTaea', [Validators.required,]],
-      skillLevel: ['BEGINNER', [Validators.required,]],
+      title: ['', [Validators.required,]],
+      slugTitle: ['', [Validators.required,]],
+      description: ['', [Validators.required,]],
+      skillLevel: ['', [Validators.required,]],
       price: [19.99, [Validators.required,]],
       duration: [5, [Validators.required,]],
-      courseImageURL: ['../../../../../assets/images/header-image2.png' ],
-      courseVideoURL: ['../../../../../assets/images/header-image2.png'],
-      author: [undefined, [Validators.required,]],
-      language: ['ENGLISH', [Validators.required,]],
-      contributes: ['Harry', [Validators.required,]],
+      courseImageURL: ['' ],
+      courseVideoURL: [''],
+      author: [, [Validators.required,]],
+      language: ['', [Validators.required,]],
+      contributes: ['', [Validators.required,]],
     })
   }
 
@@ -42,18 +42,34 @@ export class TeacherNewCourseContentComponent implements OnInit {
   }
 
   submit() {
+    this.newCourseForm.value.slugTitle = this.slugify(this.newCourseForm.value.title)
     console.log(this.newCourseForm)
     console.log(this.newCourseForm.value)
     if ( this.newCourseForm.valid){
-
       this.service.createCourse(this.newCourseForm.value).subscribe((value) => {
         console.log("Course registered")
         console.log(value)
         this.savedCourse = value;
-
+        this.router.navigateByUrl("/");
       }, (error) => {
         console.log(error)
       });
     }
+  }
+
+  counter(i: number) {
+    return new Array(i);
+  }
+
+  private slugify(title:string) {
+    return title
+      .toString()
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w\-]+/g, "")
+      .replace(/\-\-+/g, "-")
+      .replace(/^-+/, "")
+      .replace(/-+$/, "");
   }
 }

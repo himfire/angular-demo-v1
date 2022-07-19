@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Lesson} from "../model/lesson.model";
 import {Blog} from "../model/blog.model";
+import {Constants} from "../shared/constatnts";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BlogService {
 
-  BASE_URL = "http://localhost:3000/blogs/"
+  BASE_URL = Constants.BASE_URL+"/blogs/"
 
   constructor(private http:HttpClient) {
   }

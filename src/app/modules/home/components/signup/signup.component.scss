@@ -3,11 +3,9 @@
   padding: 80px 0;
 }
 
-.register-photo .image-holder {
-  display: table-cell;
-  width: auto;
-  background: url('/assets/images/about-bluukazi.png');
-  background-size: cover;
+.register-photo img {
+  width: 100%;
+  height: 100%;
 }
 
 .register-photo .form-container {
@@ -25,7 +23,36 @@
   padding: 40px 60px;
   color: #505e6c;
 }
-
+.register-photo{
+  .alert-bg{
+    background-color: white;
+    width: 80%;
+    display: block;
+    margin: 2em auto;
+  }
+  .thank-you-pop{
+    margin:2em auto;
+    width:80%;
+    display: block;
+    img{
+      width:150px;
+      height:auto;
+      margin:0 auto;
+      display:block;
+      margin-bottom:25px;
+    }
+    h1{
+      font-size: 42px;
+      margin-bottom: 25px;
+      color:#5C5C5C;
+    }
+    p{
+      font-size: 20px;
+      margin-bottom: 27px;
+      color:#5C5C5C;
+    }
+  }
+}
 @media (max-width:991px) {
   .register-photo form {
     padding: 40px;

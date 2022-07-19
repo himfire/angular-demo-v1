@@ -1,1 +1,6 @@
-<router-outlet></router-outlet>
+<div [ngClass]="{rlt: isArabic, ltr: ! isArabic}">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- rtl -->
+<!-- ltr -->

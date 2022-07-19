@@ -14,32 +14,30 @@ export class SignupComponent implements OnInit {
   signUpForm:FormGroup
   constructor(private fb:FormBuilder,private auth:AuthService,private router:Router,private route:ActivatedRoute) {
     this.signUpForm = fb.group({
-      firstName: ['Hisham', [Validators.required]],
-      lastName: ['Khartoum', [Validators.required]],
-      username: ['hossam', [Validators.required, Validators.pattern('^[a-zA-Z][a-zA-Z0-9_-]{3,32}')]],
-      email:['hishamkhartoum@gmail.com ',[Validators.required]],
-      authority:[undefined,[Validators.required]],
+      firstName: ['',
+        [Validators.required],
+        /*Validators.compose(
+          [
+            Validators.minLength(3),
+            Validators.maxLength(50),
+            Validators.pattern('^[a-zA-Z]+$')
+          ]
+        )*/
+      ],
+      lastName: ['', [Validators.required]],
+      username: ['', [Validators.required]],
+      email:['',[Validators.required,Validators.email]],
 
-      password:['123456',[Validators.required]],
-      password2:['123456',[Validators.required]],
-      phone : fb.group({
-        countryCode: ['1',[Validators.required]],
-        phoneNumber: ['9653752342', [Validators.required]]
-      }),
-      address: fb.group({
-        address: ['test test',[Validators.required]],
-        city: ['test',[Validators.required]],
-        state: ['testt',[Validators.required]],
-        country: ['USA',[Validators.required]],
-      }),
-      accept_terms:true,
+      password:['',[Validators.required]],
+      password2:['',[Validators.required]],
+      accept_terms:[false,[Validators.required]],
 
     });
   }
 
   ngOnInit(): void {
     // load the role
-    this.route.paramMap
+    /*this.route.paramMap
       .pipe(map(() => window.history.state)).subscribe(value => {
         if ( value.role == undefined ) {
           console.log('redirect to welcome...')
@@ -52,15 +50,18 @@ export class SignupComponent implements OnInit {
           })
         }
 
-    });
+    });*/
   }
 
   formNotValid: boolean = false;
   success: boolean = false;
   failed: boolean =false;
   errors : string[] = [];
+  loadSpinner: boolean = false;
   onSubmit() {
-    console.log(this.signUpForm);
+    this.failed = false;
+    console.log(this.signUpForm.valid);
+    console.log(this.signUpForm.value)
     if ( ! this.signUpForm.valid){
       this.formNotValid = true;
     }
@@ -68,20 +69,30 @@ export class SignupComponent implements OnInit {
 /*      let form = {
         username: this.signUpForm.get('username'),
       }*/
-      this.auth.register(this.signUpForm.value).subscribe(value => {
+      console.log("Inside signup form");
+      this.loadSpinner = true;
+      /*this.auth.register(this.signUpForm.value).subscribe(value => {
         console.log("User Created");
         this.success = true;
+        this.loadSpinner = false;
+
         // this.router.navigate(["login"])
       },error => {
         console.log("Error in registering to user");
         console.log(error)
         this.errors = error;
-      })
+        this.loadSpinner = false;
+        this.failed = true;
+      })*/
 
     }
   }
 
   get f(){
     return this.signUpForm.controls;
+  }
+
+  returnToLoginPage() {
+    this.router.navigateByUrl("/login")
   }
 }

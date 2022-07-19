@@ -3,12 +3,13 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Course} from "../model/course.model";
 import {Page} from "../model/page.model";
 import {User} from "../model/user.model";
+import {Constants} from "../shared/constatnts";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CourseService {
-  BASE_URL='http://localhost:8080/api/v1/courses'
+  BASE_URL= `${Constants.BASE_URL}/api/v1/courses`
   constructor(private http:HttpClient) {
 
   }

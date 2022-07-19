@@ -7,5 +7,9 @@ import "@fancyapps/ui/src/Fancybox/Fancybox";
 })
 export class AppComponent {
   title = 'blue-ui';
+  //
+  isArabic: boolean = false;
 
+
+  // init()
 }

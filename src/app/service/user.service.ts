@@ -3,12 +3,15 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {User} from "../model/user.model";
 import {SearchUsers} from "../model/search.users.model";
 import {Page} from "../model/page.model";
+import {Constants} from "../shared/constatnts";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  BASE_URL='http://localhost:8080/api/v1/users'
+
+  BASE_URL= `${Constants.BASE_URL}/api/v1/users`
+
   constructor(private http:HttpClient) {
 
   }

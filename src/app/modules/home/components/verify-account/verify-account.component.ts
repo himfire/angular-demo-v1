@@ -9,7 +9,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class VerifyAccountComponent implements OnInit {
   accountVerified: boolean = false;
-  verifFailed: boolean = false;
+  verifyFailed: boolean = false;
   constructor(private http:HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class VerifyAccountComponent implements OnInit {
          console.log(value)
          this.accountVerified = true;
        }, error => {
-          this.verifFailed = true;
+          this.verifyFailed = true;
          console.log(error)
        });
 
